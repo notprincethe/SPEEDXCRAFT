@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
+    client.user.setGame(`speedxcraft.com `,'https://www.youtube.com/?hl=FR');
     console.log('I am ready!');
 });
 
