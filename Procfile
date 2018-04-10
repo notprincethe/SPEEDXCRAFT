@@ -1,0 +1,1 @@
+ker: node bot.js
