@@ -7,6 +7,15 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+
+client.on('message', msg => {
+  if (msg.content === '-web') {
+    msg.reply('موقعنا على الانترنت
+'``speedxcraft.com``' 
+              'تفضل بزيارتنا');
+  }
+});
+
 var mcIP = 'play.speedxcraft.com'; 
 
 client.on('message', message => {
