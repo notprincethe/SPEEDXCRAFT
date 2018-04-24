@@ -16,7 +16,7 @@ client.on('message', message => {
 var mcIP = 'play.speedxcraft.com'; 
 
 client.on('message', message => {
-    if (message.content === '/minecraft') {
+    if (message.content === '-status') {
         var url = 'http://mcapi.us/server/status?ip=' + mcIP ;
         request(url, function(err, response, body) {
             if(err) {
