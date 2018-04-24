@@ -6,12 +6,6 @@ client.on('ready', () => {
             client.user.setGame(`speedxcraft.com`,'https://www.youtube.com/?hl=FR');
     console.log('I am ready!');
 });
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
-});
-
 
 var mcIP = 'play.speedxcraft.com'; 
 
