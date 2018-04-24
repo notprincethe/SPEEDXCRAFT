@@ -11,7 +11,7 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (msg.content === '-web') {
     msg.reply('موقعنا على الانترنت``speedxcraft.com``', 
-              'تفضل بزيارتنا');
+              'تفضل بزيارتنا);
   }
 });
 
