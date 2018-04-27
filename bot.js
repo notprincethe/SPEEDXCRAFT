@@ -7,6 +7,17 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+client.on('message', function(message) {
+                  if(!message.channel.guild) return;
+    if(message.content ===  '-color 100') {
+        if(message.member.hasPermission('MANAGE_ROLES')) {
+            setInterval(function(){})
+            message.channel.send('جاري عمل الالوان |✅')
+        }else{
+            message.channel.send('ما معاك البرمشن المطلوب  |❌')
+            }
+    }
+});
 
 client.on('message', msg => {
   if (msg.content === '-web') {
