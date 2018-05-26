@@ -7,20 +7,39 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', function(message) {
-                  if(!message.channel.guild) return;
-    if(message.content ===  '-color 100') {
-        if(message.member.hasPermission('MANAGE_ROLES')) {
-            setInterval(function(){})
-            message.channel.send('جاري عمل الالوان |✅')
-        }else{
-            message.channel.send('ما معاك البرمشن المطلوب  |❌')
-            }
-    }
+client.on('message', msg => {
+  if (msg.content === 'ايبي') {
+    msg.reply('play.speedxcraft.com');
+  }
 });
 
 client.on('message', msg => {
-  if (msg.content === '-web') {
+  if (msg.content === 'ip') {
+    msg.reply('play.speedxcraft.com');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'ip') {
+    msg.reply('shop');
+  }
+});
+
+
+client.on('message', msg => {
+  if (msg.content === 'ويب') {
+    msg.reply('https://www.speedxcraft.com');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'web') {
+    msg.reply('https://www.speedxcraft.com');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'web') {
     msg.reply('موقعنا على الانترنت``speedxcraft.com``');
   }
 });
@@ -38,11 +57,11 @@ client.on('message', message => {
             body = JSON.parse(body);
             var status = '*السيرفر طافي*';
             if(body.online) {
-                status = '**سيرفرك** **شغال**  -  ';
+                status = '**السيرفر** **شغال**  -  ';
                 if(body.players.now) {
                     status += '**' + body.players.now + '** واحد بالسيرفر';
                 } else {
-                    status += '*ولا حدا بلعب بالسيرفر*';
+                    status += '*ولا حدا بيلعب بالسيرفر*';
                 }
             }
             message.reply(status);
