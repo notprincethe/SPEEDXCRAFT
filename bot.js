@@ -20,8 +20,8 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ip') {
-    msg.reply('shop');
+  if (msg.content === 'shop') {
+    msg.reply('https://www.speedxcraft.com');
   }
 });
 
