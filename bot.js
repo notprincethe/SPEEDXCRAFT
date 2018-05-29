@@ -35,7 +35,7 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (msg.content === 'ip') {
     msg.reply('play.speedxcraft.com');
-  }
+  } 
 });
 
 client.on('message', msg => {
