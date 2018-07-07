@@ -108,8 +108,8 @@ client.on("message", message => {
   .marry : لعبة طلب الزواج من شخص , لازم تمنشن شخص تطلب يده
   .reverse (الكلام الي تبي تعكسه ) 
   .emoji : يحول كلامك لإيموجي
-  .mention : لعبة منشن لي شخص | [NEW]
-  
+  .mention : لعبة منشن لي شخص 
+  .kiss or اعطاء بوسة للشخص الي تمنشنو : .بوسة| [NEW]
   
   
   **إنشاء الله سيتم إضافت أوامر أخرى**...
@@ -146,6 +146,76 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
          
   message.channel.sendEmbed(embed);
     }
+});
+
+client.on('message',  (message) => {
+        if(message.content.startsWith('.kiss')) {
+  let user = message.mentions.users.first();
+  if (!user) {
+    /**
+     * The command was ran with invalid parameters.
+     * @fires commandUsage
+     */
+    return message.emit('commandUsage', message, this.help);
+  }
+
+  let kiss = [
+    'https://media.giphy.com/media/X9w8yR8kFwJMs/giphy.gif',
+    'https://media.giphy.com/media/lTQF0ODLLjhza/giphy.gif',
+    'https://media.giphy.com/media/10UUe8ZsLnaqwo/giphy.gif',
+    'https://media.giphy.com/media/nzDez5n4biPGE/giphy.gif',
+    'https://media.giphy.com/media/108M7gCS1JSoO4/giphy.gif',
+    'https://media.giphy.com/media/3o8doT9BL7dgtolp7O/giphy.gif',
+    'https://media.giphy.com/media/Nydo55HzhyGqI/giphy.gif',
+    'https://media.giphy.com/media/dpSrm4cwUmCeQ/giphy.gif'
+  ];
+
+  message.channel.send({
+    embed: {
+      description: `${message.author.username} give you kiss ${user.username}! :punch:`,
+      image: {
+        url: kiss[Math.floor(Math.random() * kiss.length)]
+      }
+    }
+  }).catch(e => {
+    client.log.error(e);
+  })
+        }  
+});
+
+client.on('message',  (message) => {
+        if(message.content.startsWith('.بوسة')) {
+  let user = message.mentions.users.first();
+  if (!user) {
+    /**
+     * The command was ran with invalid parameters.
+     * @fires commandUsage
+     */
+    return message.emit('commandUsage', message, this.help);
+  }
+
+  let kiss = [
+    'https://media.giphy.com/media/X9w8yR8kFwJMs/giphy.gif',
+    'https://media.giphy.com/media/lTQF0ODLLjhza/giphy.gif',
+    'https://media.giphy.com/media/10UUe8ZsLnaqwo/giphy.gif',
+    'https://media.giphy.com/media/nzDez5n4biPGE/giphy.gif',
+    'https://media.giphy.com/media/108M7gCS1JSoO4/giphy.gif',
+    'https://media.giphy.com/media/3o8doT9BL7dgtolp7O/giphy.gif',
+    'https://media.giphy.com/media/Nydo55HzhyGqI/giphy.gif',
+    'https://media.giphy.com/media/dpSrm4cwUmCeQ/giphy.gif'
+  ];
+
+  message.channel.send({
+    embed: {
+      description: `${message.author.username} عطاك بووووسه ${user.username}! :punch:`,
+      image: {
+        url: kiss[Math.floor(Math.random() * kiss.length)]
+      }
+    }
+  }).catch(e => {
+    client.log.error(e);
+  })
+        }  
 });
 
    client.on('message', message => {
