@@ -687,10 +687,10 @@ client.on('message', message => {
 
 client.on('message', message => {
     if(message.content.includes('discord.gg')){
-                                            if(!message.channel.guild) return message.reply('** :heart:  Thanks To Add Me To Your Server :heart:    **');
+                                            if(!message.channel.guild) return message.reply('** advertising me on DM ? :thinking:   **');
         if (!message.member.hasPermissions(['ADMINISTRATOR'])){
         message.delete()
-    return message.reply(`** Not allowed to advertising Here ! **`)
+    return message.reply(`** Not allowed to advertising Here :angry: ! **`)
     }
 }
 });
@@ -1104,7 +1104,7 @@ client.on('message', function(message) {
       if(ReBeeL.content.startsWith(prefix + "msgowner")) {
         let args = ReBeeL.content.split(" ").slice(1);
            if(!args[0]) {
-              ReBeeL.channel.send("** -bcowner <message> **")
+              ReBeeL.channel.send("** .msgowner <message> **")
                 return;
                   }      
                    var rebel = new Discord.RichEmbed()
@@ -1142,16 +1142,6 @@ client.on('message', msg => {
   if (msg.content === 'prince') {
     msg.reply('هلا انا برنس بوت بوت عربي شامل طبعا فريق البوت يشتغل على إضافة المزيد من الاوامر لإسعاددكم و مساعدتكم لإيجاد كل ما تحتاجونه في بوتنا شكرا لإحتمامك بالبوت لإضافتي إلى سيرفرك اكتب .invite :heart:  ');
   }
-});
-
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('https://discord.gg/')){
-      if(!message.member.hasPermission('ADMINISTRATOR'))
-        message.delete()
-    return message.reply(`** يمنع نشر الروابط بهذا السيرفر  :angry: ! **`)
-    }
 });
 
 
