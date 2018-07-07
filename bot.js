@@ -639,18 +639,6 @@ client.on('message', message => {
 });
 
 
-client.on('message', message => {
-            if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('.bc-all-sv')){
- if(!message.author.id === '314845344313901057') return;
-message.channel.sendMessage('**جار ارسال الرسالة |:white_check_mark:**')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
-}
-});
-
 
   client.on("message", message => {
     const prefix = "."
