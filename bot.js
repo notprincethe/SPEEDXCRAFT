@@ -165,7 +165,7 @@ client.on("guildMemberAdd", member => {
 
 client.on('message', msg => {
 
-  if(msg.content.startsWith('.sug')) {
+  if(msg.content.startsWith('.suggest')) {
     if(!msg.channel.guild) return msg.reply('** هاذا الامر فقط للسيرفرات**');
     if(!msg.guild.channels.find('name', 'suggestions')) return msg.reply('**الرجاء إضافة روم بإسم (suggestions)**');
     let args = msg.content.split(" ").slice(1);
@@ -178,7 +178,7 @@ client.on('message', msg => {
 
       الاقتراح :
       ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
-`)
+      `)
       .then(function (message) {
         message.react('✅')
         message.react('❌')
