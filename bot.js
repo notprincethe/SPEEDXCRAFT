@@ -155,24 +155,35 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
     }
 });
 
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`🌹  ولكم نورت السيرفر 🌹 
+👑اسم العضو  ${member}👑  
+انت العضو رقم ${member.guild.memberCount}`) 
+}).catch(console.error)
+});
+
 client.on('message', msg => {
 
-  if(msg.content.startsWith('.sug')) {
+  if(msg.content.startsWith('.suggest')) {
     if(!msg.channel.guild) return msg.reply('** هاذا الامر فقط للسيرفرات**');
     if(!msg.guild.channels.find('name', 'suggestions')) return msg.reply('**الرجاء إضافة روم بإسم (suggestions)**');
     let args = msg.content.split(" ").slice(1);
     if(!args[1]) return msg.reply('الرجاء كتابة الاقتراح')
     //غيره على حسب اسم روم الاقتراحات او سوي مثل اسم الروم الموجود هنا
     if(msg.guild.channels.find('name', 'suggestions')) {
+      //غيره هنا كمان اذا غيرت فوق
       msg.guild.channels.find('name', 'suggestions').send(`
-**      الاقتراح :
-=============================================**
+      **الاقتراح : 
+====================================
 
-${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
+[** ${args.join(" ").split(msg.mentions.members.first()).slice(' ')} **]
 
-**=============================================
-      تم الاقتراح من قبل :** ${msg.member}
-      `)
+====================================
+
+
+      تم الاقتراح من قبل :[**  ${msg.member} **]**
+`)
       .then(function (message) {
         message.react('✅')
         message.react('❌')
@@ -180,14 +191,6 @@ ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
       }
     }
 
-});
-
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`🌹  ولكم نورت السيرفر 🌹 
-👑اسم العضو  ${member}👑  
-انت العضو رقم ${member.guild.memberCount}`) 
-}).catch(console.error)
 });
 
 client.on('message',  (message) => {
