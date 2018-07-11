@@ -174,13 +174,10 @@ client.on('message', msg => {
     if(msg.guild.channels.find('name', 'suggestions')) {
       //غيره هنا كمان اذا غيرت فوق
       msg.guild.channels.find('name', 'suggestions').send(`
- 
-** المقترح: [**  ${msg.member} **]
+      تم الاقتراح من قبل : ${msg.member}
 
-==================================
       الاقتراح :
-
-     [** ${args.join(" ").split(msg.mentions.members.first()).slice(' ')} **]**
+      ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
 `)
       .then(function (message) {
         message.react('✅')
