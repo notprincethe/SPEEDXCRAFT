@@ -164,13 +164,13 @@ client.on('message', msg => {
     if(!args[1]) return msg.reply('الرجاء كتابة الاقتراح')
     //غيره على حسب اسم روم الاقتراحات او سوي مثل اسم الروم الموجود هنا
     if(msg.guild.channels.find('name', 'suggestions')) {
-      //غيره هنا كمان اذا غيرت فوق
+      msg.channel.send(`**تم ارسال القتراح بنجاح الي رووم الاقتراحات**);
       msg.guild.channels.find('name', 'suggestions').send(`
 **      الاقتراح :
 =============================================**
-      **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
-=============================================
-      تم الاقتراح من قبل : ${msg.member}**
+      ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
+**=============================================
+      تم الاقتراح من قبل :** ${msg.member}
       `)
       .then(function (message) {
         message.react('✅')
