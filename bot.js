@@ -167,7 +167,9 @@ client.on('message', msg => {
       msg.guild.channels.find('name', 'suggestions').send(`
 **      الاقتراح :
 =============================================**
-      ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
+
+${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
+
 **=============================================
       تم الاقتراح من قبل :** ${msg.member}
       `)
