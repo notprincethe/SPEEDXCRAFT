@@ -86,7 +86,7 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
    
 
 
-   client.on('message', msg => {
+   client.on('message', message => {
     if(msg.content === '.help') {
     let embed = new Discord.RichEmbed()
             .setColor("RANDOM")
@@ -95,7 +95,7 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
             .help-admin = كل الأوامر الإدارية مع التفاصيل
             .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل
             .suppot = للحصول على سيرفر الدعم
-            
+            `)
 
             message.channel.sendEmbed(embed);
     }
@@ -109,8 +109,7 @@ client.on("message", message => {
          .setFooter('Bot Owner : @The Prince#2981 ')
          .setThumbnail(message.author.avatarURL)
          .setDescription(`
-  
-     ** كل الأوامر الإدارية**
+      كل الأوامر الإدارية
 	 
 	  
   .help : لمعرفت كل الأوامر
