@@ -1766,7 +1766,6 @@ reaction2.on("collect", r => {
 }
 });
 
-
 client.on('message', message => {
 if(!message.channel.guild) return;
 if (message.content.startsWith(".ping")) {
