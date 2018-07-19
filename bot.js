@@ -84,8 +84,8 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
   .setAuthor(message.author.username)
   .setColor("#fffc00")
   .addField(" ** إختر نوع المساعدة **", " Prince Bot ")
-  .addField(" .help-admin = كل الأوامر الإدارية مع التفاصيل, Prince Bot ")
-  .addField(" .help-games = كل الأوامر الخاصة بالألعاب مع التفاصيل, Prince Bot ")
+  .addField(" .help-admin = كل الأوامر الإدارية مع التفاصيل ", "Prince Bot ")
+  .addField(" .help-games = كل الأوامر الخاصة بالألعاب مع التفاصيل ", "Prince Bot ")
   .addField(" .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل", " Prince Bot ")
 
          
