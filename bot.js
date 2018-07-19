@@ -8,7 +8,7 @@ const YouTube = require('simple-youtube-api');
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
 const prefix = '.'
-   
+    
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -84,9 +84,8 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
   .setAuthor(message.author.username)
   .setColor("#fffc00")
   .addField(" ** إختر نوع المساعدة **", " Prince Bot ")
-
-  .addField(" .help-admin" كل الأوامر الإدارية مع التفاصيل, " Prince Bot ")
-  .addField(" .help-games" كل الأوامر الخاصة بالألعاب مع التفاصيل, " Prince Bot ")
+  .addField(" .help-admin = كل الأوامر الإدارية مع التفاصيل, Prince Bot ")
+  .addField(" .help-games = كل الأوامر الخاصة بالألعاب مع التفاصيل, Prince Bot ")
   .addField(" .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل", " Prince Bot ")
 
          
