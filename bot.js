@@ -86,6 +86,7 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
   .addField(" .help-games = كل الأوامر الخاصة بالألعاب مع التفاصيل)
   .addField(" .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل)
   .addField(" .suppot = للحصول على سيرفر الدعم)
+  .setFooter('Bot Owner : @The Prince#2981 ')
 message.channel.sendEmbed(embed);
     }
 });
