@@ -52,8 +52,9 @@ client.on("message", message => {
   .reverse (الكلام الي تبي تعكسه ) 
   .emoji : يحول كلامك لإيموجي
   .mention : لعبة منشن لي شخص 
-  .kiss or اعطاء بوسة للشخص الي تمنشنو : .بوسة  
-  
+  .kiss or اعطاء بوسة للشخص الي تمنشنو : .بوسة [New]
+  .cal : الألة الحاسبة
+
   **إنشاء الله سيتم إضافت أوامر أخرى**...
   
   رابط إضافة البوت :  https://goo.gl/VddrDM  
@@ -178,7 +179,7 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
   .emoji : يحول كلامك لإيموجي
   .report : اكتب هذا الامر و منشن الشخص الذي تبي تبلغ عليه وراح يرسل البوت رسالة لصاحب السيرفر
   .بوسة / .kiss : give someone kiss [New] 
-  
+  .cal : الألة الحاسبة
   
   
   إنشاء الله سيتم إضافت أوامر أخرى
@@ -1986,6 +1987,31 @@ client.on('message', msg => {
   if (msg.content === 'السلام عليكم') {
     msg.reply('**وعليكم السلام ورحمة الله تعالى وبركاته :heart: **');
   }
+});
+
+  const math = require('math-expression-evaluator');
+const stripIndents = require('common-tags').stripIndents;
+
+client.on('message', msg => {
+ if (msg.content.startsWith(prefix + 'cal')) {
+    let args = msg.content.split(" ").slice(1);
+        const question = args.join(' ');
+    if (args.length < 1) {
+        msg.reply('**من فضلك .. قم بكتابة سؤال **.');
+} else {    let answer;
+    try {
+        answer = math.eval(question);
+    } catch (err) {
+        return msg.reply(`Error: ${err}`);
+    }
+
+    const embed = new Discord.RichEmbed()
+    .addField("**Question ❓ **: ",`**${question}**`, true)
+    .addField("**◾**  ",`**${answer}**`, true)
+    .setFooter("S Bot Calculator ")
+    msg.channel.send(embed)
+    }
+};
 });
   
 // THIS  MUST  BE  THIS  WAY
