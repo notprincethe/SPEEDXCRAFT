@@ -158,6 +158,29 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
    }
    }); 
 
+client.on('message', message => {
+     if(!message.channel.guild) return;
+var prefix = ".";
+                if(message.content.startsWith(prefix + 'allbots')) {
+
+    
+    if (message.author.bot) return;
+    let i = 1;
+        const botssize = message.guild.members.filter(m=>m.user.bot).map(m=>`${i++} - <@${m.id}>`);
+          const embed = new Discord.RichEmbed()
+          .setAuthor(message.author.tag, message.author.avatarURL)
+          .setDescription(`**Found ${message.guild.members.filter(m=>m.user.bot).size} bots in this Server**
+${botssize.join('\n')}`)
+.setFooter(client.user.username, client.user.avatarURL)
+.setTimestamp();
+message.channel.send(embed)
+
+}
+
+
+});
+
+
 
    client.on("message", message => {
     if (message.content === ".help-games") {
@@ -206,7 +229,7 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
          .setThumbnail(message.author.avatarURL)
          .setDescription(`
   
-     ** مر الإدارية الميوزك**
+     ** اوامر الميوزك**
 	 
   .play ⇏ لتشغيل أغنية برآبط أو بأسم
   .skip ⇏ لتجآوز الأغنية الحآلية
