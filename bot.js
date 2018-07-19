@@ -2092,17 +2092,7 @@ client.on('guildMemberAdd', member => {
     });
     
 
-   client.on('message', message => {
-if (message.content.startsWith('.p-sug')){
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("random")
-  .addField(" **Done | تــــم :white_check_mark:**" , " ** تم إرسال الرسالة لصاحب البوت سنتطلع عليها قريبا  **")
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
+
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
