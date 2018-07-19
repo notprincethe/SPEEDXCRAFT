@@ -1761,23 +1761,6 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
   }
 });
 
-client.on("guildCreate", guild => {
-    let embed = new Discord.RichEmbed () 
-    .setTitle('Bot Logs')
-    .addField(' ***Bot joined to :***[' + `${guild.name}` + ']   **By : **' + `${guild.owner.user.username}` + '')
-    .setFooter('The bot is happy')
-    .setTimestamp()
-    client.channels.get("464449492951760906").send(embed)
-  });
-
-  client.on("guildDelete", guild => {
-  let embed = new Discord.RichEmbed ()
-  .setTitle('Bot Logs')
-  .addField(' ***Bot left from :***[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
-  .setFooter('The bot is crying')
-  .setTimestamp()
-  client.channels.get("464449492951760906").send(embed)
-});
 
 client.on('message', function(message) {
     if(message.content.startsWith(prefix + "report")) {
