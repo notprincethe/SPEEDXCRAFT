@@ -1322,12 +1322,12 @@ client.on('message', message => {
                      message.guild.createRole({ name: "Members", color: "#ffffff", permissions: [] })
         
 
-message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم صناعه الرتب **')
+message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم صناعه الرتب بدون برمشنات**')
 }
 });
 
 client.on('message', message => {
-    if (message.content === ".rooms") {
+    if (message.content === ".crooms") {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
 
@@ -1355,7 +1355,7 @@ client.on('message', message => {
      message.guild.createChannel('pic', 'text')
 
 
-message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم صناعة السيرفر**')
+message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم صناعة الرومات  بدون برمشن**')
 }
 });
 
