@@ -87,10 +87,10 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
 
 
    client.on('message', message => {
-    if(msg.content === '.help') {
+    if(message.content === '.help') {
     let embed = new Discord.RichEmbed()
             .setColor("RANDOM")
-            .setDescription(`اتفضل قائمة الأوامر ${msg.author.tag}
+            .setDescription(`اتفضل قائمة الأوامر ${message.author.tag}
             .help-admin = كل الأوامر الإدارية مع التفاصيل
             .help-admin = كل الأوامر الإدارية مع التفاصيل
             .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل
