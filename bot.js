@@ -103,7 +103,7 @@ client.on("message", message => {
   
      ** كل الأوامر الإدارية**
 	 
-	 
+	  
   .help : لمعرفت كل الأوامر
   .invite : لدعوة البوت لسرفرك
   .support : :gear:  للحصول على رابط سرفر الدعم الخاص بالبوت :gear: 
@@ -117,7 +117,7 @@ client.on("message", message => {
   .unmutechannel : فك الميوت عن الشانل
   .hchannel : يخفي الرووم يعني ولا احد يقدر يشوف الرووم
   .schannel : يزهر الرووم ويصير يقدر الكل يشوف الرووم
-  .member : يعرض لك حالت كل اعشاء السيرفر
+  .members : يعرض لك حالت كل اعضاء السيرفر
   .msgowner : لإرسال رسالة لصاحب السيرفر
   .clear : لحذف الشات  
   .addrole : لإنشاء رتبة بالسيرفر
@@ -129,7 +129,6 @@ client.on("message", message => {
   .invites : لمعرفت كم شخص جبته للسيرفر
   .bc : برودكاست يعني يرسل رسالة لكل اعضاء السيرفر  
   .sv-logo : لرأية شعار السرفر
-  .member : لرأيت حالات كل أعضاء السرفر
   .ping : لرأية سرعة إتصال البوت
   .channelname : يغير إسم الرووم الي انت تكتب فيها
   .date : يعرض لك التاريخ
@@ -1778,7 +1777,7 @@ client.on("guildCreate", guild => {
     .addField(' ***Bot joined to :***[' + `${guild.name}` + ']   **By : **' + `${guild.owner.user.username}` + '')
     .setFooter('The bot is happy')
     .setTimestamp()
-    client.channels.get("469493683683590156").send(embed)
+    client.channels.get("464449492951760906").send(embed)
   });
 
   client.on("guildDelete", guild => {
@@ -1787,7 +1786,7 @@ client.on("guildCreate", guild => {
   .addField(' ***Bot left from :***[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
   .setFooter('The bot is crying')
   .setTimestamp()
-  client.channels.get("469493683683590156").send(embed)
+  client.channels.get("464449492951760906").send(embed)
 });
 
 client.on('message', function(message) {
