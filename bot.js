@@ -1430,25 +1430,7 @@ client.on('message', function(message) {
      
 });
 
-  client.on('message',async message => {
-    if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "314845344313901057") return message.reply('You aren\'t the bot owner.');
-        message.channel.send('**Restarting.**').then(msg => {
-            setTimeout(() => {
-               msg.edit('**Restarting..**');
-            },1000);
-            setTimeout(() => {
-               msg.edit('**Restarting...**');
-            },2000);
-        });
-        console.log(`${message.author.tag} [ ${message.author.id} ] has restarted the bot.`);
-        console.log(`Restarting..`);
-        setTimeout(() => {
-            client.destroy();
-            client.login('NDYzNzc5NDExMDcwODEyMTgw.DjIsQg.G8qpV1ACJeRQpVI8kcwR6iuQ6dM');
-        },3000);
-    }
-});
+
   
 
    client.on('message', message => {
