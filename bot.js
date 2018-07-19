@@ -49,24 +49,23 @@ client.on("message", message => {
   .unmutechannel : فك الميوت عن الشانل
   .hchannel : يخفي الرووم يعني ولا احد يقدر يشوف الرووم
   .schannel : يزهر الرووم ويصير يقدر الكل يشوف الرووم
-  .member : يعرض لك حالت كل اعشاء السيرفر
+  .members : يعرض لك حالت كل اعشاء السيرفر
   .msgowner : لإرسال رسالة لصاحب السيرفر
   .clear : لحذف الشات  
   .addrole : لإنشاء رتبة بالسيرفر
   .ban : إعطاء بان 
   .kick : إعطاء كيك      
-  .allbots : يعطيك كل البوتات الموجودة بسيرفرك
   .delete-cannels : لحذف كل الروومات الموجودة بالسيرفر
   .delet-roles : لحذف كل الرتب الموجودة بالسيرفر
   .invites : لمعرفت كم شخص جبته للسيرفر
   .bc : برودكاست يعني يرسل رسالة لكل اعضاء السيرفر  
   .sv-logo : لرأية شعار السرفر
-  .member : لرأيت حالات كل أعضاء السرفر
   .ping : لرأية سرعة إتصال البوت
   .channelname : يغير إسم الرووم الي انت تكتب فيها
   .date : يعرض لك التاريخ
   .report : اكتب هذا الامر و منشن الشخص الذي تبي تبلغ عليه وراح يرسل البوت رسالة لصاحب السيرفر
   .sug : اقتراح للسيرفر ورح يرسل الاقتراح في رووم الاونر رح يسويها <suggestion> | [NEW]  
+ 
   -----Games Commands-----
   .rps : لعبة حجرة ورقة مقص
   .كف @user : يعطي كف للشخص الي منشنته
@@ -571,7 +570,7 @@ message.channel.send({embed});
 
 
 client.on('message', message => {
-    if(message.content == '.member') {
+    if(message.content == '.members') {
     const embed = new Discord.RichEmbed()
     .setDescription(`**Members info
 اونلاين:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}
@@ -1214,7 +1213,7 @@ client.on('message', function(message) {
       if(ReBeeL.content.startsWith(prefix + "msgowner")) {
         let args = ReBeeL.content.split(" ").slice(1);
            if(!args[0]) {
-              ReBeeL.channel.send("** .msgowner <message> **")
+              ReBeeL.channel.send("** .bcowner <message> **")
                 return;
                   }      
                    var rebel = new Discord.RichEmbed()
@@ -1576,27 +1575,7 @@ if (message.content.startsWith(".ping")) {
     }
 });
 
-client.on('message', message => {
-     if(!message.channel.guild) return;
-var prefix = ".";
-                if(message.content.startsWith(prefix + 'allbots')) {
 
-    
-    if (message.author.bot) return;
-    let i = 1;
-        const botssize = message.guild.members.filter(m=>m.user.bot).map(m=>`${i++} - <@${m.id}>`);
-          const embed = new Discord.RichEmbed()
-          .setAuthor(message.author.tag, message.author.avatarURL)
-          .setDescription(`**Found ${message.guild.members.filter(m=>m.user.bot).size} bots in this Server**
-${botssize.join('\n')}`)
-.setFooter(client.user.username, client.user.avatarURL)
-.setTimestamp();
-message.channel.send(embed)
-
-}
-
-
-});
 
 client.on('message', message => {
 
