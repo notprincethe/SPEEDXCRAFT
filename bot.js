@@ -2046,7 +2046,7 @@ var fkk =[
 
 
    client.on("message", async message => {
-	   var prefix = "-";
+	   var prefix = ".";
     if(message.content == prefix+"فكك"){
         if(UserBlocked.has(message.guild.id)) return message.channel.send("هناك جلسة .")
         UserBlocked.add(message.guild.id)
