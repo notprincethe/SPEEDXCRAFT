@@ -81,16 +81,14 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
    client.on('message', message => {
      if (message.content === ".help") {
      let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#fffc00")
-  .addField(" ** إختر نوع المساعدة **", " Prince Bot ")
-  .addField(" .help-admin = كل الأوامر الإدارية مع التفاصيل, ")
-  .addField(" .help-games = كل الأوامر الخاصة بالألعاب مع التفاصيل,  ")
-  .addField(" .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل", " Prince Bot ")
-
-         
-  message.channel.sendEmbed(embed);
+  .setColor('RANDOM')
+  .addField(" .help-admin = كل الأوامر الإدارية مع التفاصيل ")
+  .addField(" .help-games = كل الأوامر الخاصة بالألعاب مع التفاصيل)
+  .addField(" .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل)
+  .addField(" .suppot = للحصول على سيرفر الدعم)
+message.channel.sendEmbed(embed);
     }
+});
 });
 
 client.on("message", message => {
