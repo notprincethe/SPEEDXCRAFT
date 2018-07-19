@@ -2002,7 +2002,7 @@ client.on('message', msg => {
     const embed = new Discord.RichEmbed()
     .addField("**Question ❓ **: ",`**${question}**`, true)
     .addField("**◾**  ",`**${answer}**`, true)
-    .setFooter("S Bot Calculator ")
+    .setFooter("Prince Bot Calculator ")
     msg.channel.send(embed)
     }
 };
@@ -2084,5 +2084,6 @@ var fkk =[
   }
 });
   
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
