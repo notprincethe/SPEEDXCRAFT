@@ -32,72 +32,7 @@ client.on('message', msg => {
   }
 });
 
-client.on("message", message => {
-    if (message.content === ".help") {
-     const embed = new Discord.RichEmbed() 
-         .setColor("#ffff00")
-         .setFooter('Bot Owner : @The Prince#2981 ')
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`
-  
-     **َ All Commands : كل الأوامر **
-	 
-	 
-  .help : لمعرفت كل الأوامر
-  .invite : لدعوة البوت لسرفرك
-  .support : :gear:  للحصول على رابط سرفر الدعم الخاص بالبوت :gear: 
-  .id : الأيدي حقك
-  .croles : ينشأ لك كل الرتب وانت عدل على البرمشنات تبغها
-  .roles : يعرض لك كل رتب السرفر بالترتيب
-  .server : معلومات عن السرفر 
-  .mute : إعطاء ميوت كتابي
-  .unmute : إزالة الميوت
-  .mutechannel : ميوت شانل
-  .unmutechannel : فك الميوت عن الشانل
-  .hchannel : يخفي الرووم يعني ولا احد يقدر يشوف الرووم
-  .schannel : يزهر الرووم ويصير يقدر الكل يشوف الرووم
-  .members : يعرض لك حالت كل اعشاء السيرفر
-  .msgowner : لإرسال رسالة لصاحب السيرفر
-  .clear : لحذف الشات  
-  .addrole : لإنشاء رتبة بالسيرفر
-  .ban : إعطاء بان 
-  .kick : إعطاء كيك      
-  .delete-cannels : لحذف كل الروومات الموجودة بالسيرفر
-  .delet-roles : لحذف كل الرتب الموجودة بالسيرفر
-  .invites : لمعرفت كم شخص جبته للسيرفر
-  .bc : برودكاست يعني يرسل رسالة لكل اعضاء السيرفر  
-  .sv-logo : لرأية شعار السرفر
-  .ping : لرأية سرعة إتصال البوت
-  .channelname : يغير إسم الرووم الي انت تكتب فيها
-  .date : يعرض لك التاريخ
-  .report : اكتب هذا الامر و منشن الشخص الذي تبي تبلغ عليه وراح يرسل البوت رسالة لصاحب السيرفر
-  .sug : اقتراح للسيرفر ورح يرسل الاقتراح في رووم الاونر رح يسويها <suggestion> | [NEW]  
- 
-  -----Games Commands-----
-  .rps : لعبة حجرة ورقة مقص
-  .كف @user : يعطي كف للشخص الي منشنته
-  .sara7a : لبدأ لعبة الصراحة
-  .cuttweet : لبدأ لعبة كت تويت
-  .marry : لعبة طلب الزواج من شخص , لازم تمنشن شخص تطلب يده
-  .reverse (الكلام الي تبي تعكسه ) 
-  .emoji : يحول كلامك لإيموجي
-  .mention : لعبة منشن لي شخص 
-  .kiss or اعطاء بوسة للشخص الي تمنشنو : .بوسة
- 
-  إنشاء الله سيتم إضافت أوامر أخرى
-  
-  رابط إضافة البوت :  https://goo.gl/VddrDM 
-  
-Our Discord Serveur For Support : https://discord.gg/DNJ8Q2B
 
-
-Bot Owner : @The Prince#2981 | <@314845344313901057>
-
-   `)
-   message.author.sendEmbed(embed)
-   
-   }
-   }); 
    
 client.on("message", message => {
     if (message.content === ".games") {
@@ -148,12 +83,150 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#fffc00")
-  .addField(" ** :white_check_mark:  Check DM |شيك على الخاص**", " Prince Bot ")
+  .addField(" ** إختر نوع المساعدة **", " Prince Bot ")
+
+  .addField(" .help-admin" كل الأوامر الإدارية مع التفاصيل, " Prince Bot ")
+  .addField(" .help-games" كل الأوامر الخاصة بالألعاب مع التفاصيل, " Prince Bot ")
+  .addField(" .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل", " Prince Bot ")
 
          
   message.channel.sendEmbed(embed);
     }
 });
+
+client.on("message", message => {
+    if (message.content === ".help-admin") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#ffff00")
+         .setFooter('Bot Owner : @The Prince#2981 ')
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+  
+     ** كل الأوامر الإدارية**
+	 
+	 
+  .help : لمعرفت كل الأوامر
+  .invite : لدعوة البوت لسرفرك
+  .support : :gear:  للحصول على رابط سرفر الدعم الخاص بالبوت :gear: 
+  .id : الأيدي حقك
+  .croles : ينشأ لك كل الرتب وانت عدل على البرمشنات تبغها
+  .roles : يعرض لك كل رتب السرفر بالترتيب
+  .server : معلومات عن السرفر 
+  .mute : إعطاء ميوت كتابي
+  .unmute : إزالة الميوت
+  .mutechannel : ميوت شانل
+  .unmutechannel : فك الميوت عن الشانل
+  .hchannel : يخفي الرووم يعني ولا احد يقدر يشوف الرووم
+  .schannel : يزهر الرووم ويصير يقدر الكل يشوف الرووم
+  .member : يعرض لك حالت كل اعشاء السيرفر
+  .msgowner : لإرسال رسالة لصاحب السيرفر
+  .clear : لحذف الشات  
+  .addrole : لإنشاء رتبة بالسيرفر
+  .ban : إعطاء بان 
+  .kick : إعطاء كيك      
+  .allbots : يعطيك كل البوتات الموجودة بسيرفرك
+  .delete-cannels : لحذف كل الروومات الموجودة بالسيرفر
+  .delet-roles : لحذف كل الرتب الموجودة بالسيرفر
+  .invites : لمعرفت كم شخص جبته للسيرفر
+  .bc : برودكاست يعني يرسل رسالة لكل اعضاء السيرفر  
+  .sv-logo : لرأية شعار السرفر
+  .member : لرأيت حالات كل أعضاء السرفر
+  .ping : لرأية سرعة إتصال البوت
+  .channelname : يغير إسم الرووم الي انت تكتب فيها
+  .date : يعرض لك التاريخ
+
+  
+  
+  إنشاء الله سيتم إضافت أوامر أخرى
+  
+  رابط إضافة البوت :  https://goo.gl/VddrDM 
+  
+Our Discord Serveur For Support : https://discord.gg/DNJ8Q2B
+
+
+Bot Owner : @The Prince#2981 | <@314845344313901057>
+
+   `)
+   message.author.sendEmbed(embed)
+   
+   }
+   }); 
+
+
+   client.on("message", message => {
+    if (message.content === ".help-games") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#ffff00")
+         .setFooter('Bot Owner : @The Prince#2981 ')
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+  
+     ** كل الأوامر الألعاب**
+	 
+  .rps : لعبة حجرة ورقة مقص
+  .كف @user : يعطي كف للشخص الي منشنته
+  .sara7a : لبدأ لعبة الصراحة
+  .cuttweet : لبدأ لعبة كت تويت
+  .marry : لعبة طلب الزواج من شخص , لازم تمنشن شخص تطلب يده
+  .reverse (الكلام الي تبي تعكسه ) 
+  .emoji : يحول كلامك لإيموجي
+  .report : اكتب هذا الامر و منشن الشخص الذي تبي تبلغ عليه وراح يرسل البوت رسالة لصاحب السيرفر
+  .بوسة / .kiss : give someone kiss [New] 
+  
+  
+  
+  إنشاء الله سيتم إضافت أوامر أخرى
+  
+  رابط إضافة البوت :  https://goo.gl/VddrDM 
+  
+Our Discord Serveur For Support : https://discord.gg/DNJ8Q2B
+
+
+Bot Owner : @The Prince#2981 | <@314845344313901057>
+
+   `)
+   message.author.sendEmbed(embed)
+   
+   }
+   }); 
+   
+   
+   
+     client.on("message", message => {
+    if (message.content === ".help-music") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#ffff00")
+         .setFooter('Bot Owner : @The Prince#2981 ')
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+  
+     ** مر الإدارية الميوزك**
+	 
+  .play ⇏ لتشغيل أغنية برآبط أو بأسم
+  .skip ⇏ لتجآوز الأغنية الحآلية
+  .pause ⇏ إيقآف الأغنية مؤقتا
+  .resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+  .vol ⇏ لتغيير درجة الصوت 100 - 0
+  .stop ⇏ لإخرآج البوت من الروم
+  .np ⇏ لمعرفة الأغنية المشغلة حآليا
+  .queue ⇏ لمعرفة قآئمة التشغيل 
+
+  
+  
+  إنشاء الله سيتم إضافت أوامر أخرى
+  
+  رابط إضافة البوت :  https://goo.gl/VddrDM 
+  
+Our Discord Serveur For Support : https://discord.gg/DNJ8Q2B
+
+
+Bot Owner : @The Prince#2981 | <@314845344313901057>
+
+   `)
+   message.author.sendEmbed(embed)
+   
+   }
+   }); 
 
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
