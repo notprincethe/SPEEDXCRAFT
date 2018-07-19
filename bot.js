@@ -86,7 +86,6 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
   const embed = new Discord.RichEmbed()
             .setColor("RANDOM")
             .setThumbnail(msg.author.avatarURL)
-                                .setTitle("**أوامر الأداره**")
             .setDescription(`اتفضل قائمة الأوامر ${msg.author.tag}
             .help-admin = كل الأوامر الإدارية مع التفاصيل
             .help-admin = كل الأوامر الإدارية مع التفاصيل
@@ -96,8 +95,7 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
 `)
 
 
-        msg.author.sendEmbed(embed)
-
+            message.channel.sendEmbed(embed);
     }
 
 });
