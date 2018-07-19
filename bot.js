@@ -78,18 +78,27 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
     }
 });
    
-   client.on('message', message => {
-     if (message.content === ".help") {
-     let embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .addField(" .help-admin = كل الأوامر الإدارية مع التفاصيل ")
-  .addField(" .help-games = كل الأوامر الخاصة بالألعاب مع التفاصيل)
-  .addField(" .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل)
-  .addField(" .suppot = للحصول على سيرفر الدعم)
-  .setFooter('Bot Owner : @The Prince#2981 ')
-message.channel.sendEmbed(embed);
+
+
+   client.on('message', msg => {
+    if(msg.content === '.help') {
+  const embed = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setThumbnail(msg.author.avatarURL)
+                                .setTitle("**أوامر الأداره**")
+            .setDescription(`اتفضل قائمة الأوامر ${msg.author.tag}
+            .help-admin = كل الأوامر الإدارية مع التفاصيل
+            .help-admin = كل الأوامر الإدارية مع التفاصيل
+            .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل
+            .suppot = للحصول على سيرفر الدعم
+            
+`)
+
+
+        msg.author.sendEmbed(embed)
+
     }
-});
+
 });
 
 client.on("message", message => {
