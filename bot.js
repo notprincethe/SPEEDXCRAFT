@@ -32,7 +32,12 @@ client.on('message', msg => {
   }
 });
 
-  
+ client.on('message', msg => {
+  if (msg.content === 'هاي') {
+    msg.reply('هايات');
+  }
+});
+ 
    
 client.on("message", message => {
     if (message.content === ".games") {
