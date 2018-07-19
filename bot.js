@@ -1445,7 +1445,7 @@ client.on('message', function(message) {
         console.log(`Restarting..`);
         setTimeout(() => {
             client.destroy();
-            client.login('NDMyNjM4MzU3NDU4MTI0ODEz.Db5Mvg.HR0sFv_XjuyIDUz9trpqQkRkBmY');
+            client.login('NDYzNzc5NDExMDcwODEyMTgw.DjIsQg.G8qpV1ACJeRQpVI8kcwR6iuQ6dM');
         },3000);
     }
 });
@@ -1582,7 +1582,7 @@ __**امامك  5 توان للاختيار**__`)
 
 client.on('ebnklb',function(ebnklb) {
     
-    if(ebnklb.content.startsWith("<@432638357458124813>")) {
+    if(ebnklb.content.startsWith("<@463779411070812180>")) {
         ebnklb.channel.send('Hey Im **Prince Bot!**  A Nice Bot Developed By:`@The Prince#2981 `')
         ebnklb.channel.send('My Prefix `.`')
 
