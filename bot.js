@@ -90,7 +90,7 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
     if(message.content === '.help') {
     let embed = new Discord.RichEmbed()
             .setColor("RANDOM")
-            .setDescription(`اتفضل قائمة الأوامر ${message.author.tag}
+            .setDescription(`**تفضل قائمة الأوامر**
             .help-admin = كل الأوامر الإدارية مع التفاصيل
             .help-admin = كل الأوامر الإدارية مع التفاصيل
             .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل
