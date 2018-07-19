@@ -1778,7 +1778,7 @@ client.on("guildCreate", guild => {
     .addField(' ***Bot joined to :***[' + `${guild.name}` + ']   **By : **' + `${guild.owner.user.username}` + '')
     .setFooter('The bot is happy')
     .setTimestamp()
-    client.channels.get("464449492951760906").send(embed)
+    client.channels.get("469493683683590156").send(embed)
   });
 
   client.on("guildDelete", guild => {
@@ -1787,7 +1787,7 @@ client.on("guildCreate", guild => {
   .addField(' ***Bot left from :***[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
   .setFooter('The bot is crying')
   .setTimestamp()
-  client.channels.get("464449492951760906").send(embed)
+  client.channels.get("469493683683590156").send(embed)
 });
 
 client.on('message', function(message) {
