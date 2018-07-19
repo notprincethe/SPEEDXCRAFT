@@ -14,7 +14,7 @@ client.on('ready', () => {
 });
   
 client.on('message', message => {
-            if(!message.channel.guild) return;
+            if(!message.channel.guild) return; 
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('>bcall')){
  if (message.author.id !== '314845344313901057') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
