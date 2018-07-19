@@ -83,7 +83,7 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
 
    client.on('message', msg => {
     if(msg.content === '.help') {
-  const embed = new Discord.RichEmbed()
+    let embed = new Discord.RichEmbed()
             .setColor("RANDOM")
             .setThumbnail(msg.author.avatarURL)
             .setDescription(`اتفضل قائمة الأوامر ${msg.author.tag}
