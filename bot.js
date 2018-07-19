@@ -1124,7 +1124,7 @@ client.on('message', msg => {
 
 client.on('message', message => {
     if (message.author.id === client.user.id) return;
-    if (message.content === '0ping') {
+    if (message.content === '.ping') {
         message.channel.sendMessage(':ping_pong: Pong! In `' + `${client.ping}` + ' ms`');
     }
 });
@@ -1143,21 +1143,11 @@ message.channel.sendEmbed(embed);
     }
 });
 
-client.on('message', message => {
-            if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('.--b*c')){
- if(!message.author.id === '314845344313901057') return;
-message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
-}
-});
+
 
 client.on('message', message => {
 
-  if (message.content.startsWith( 0 + "sug")) {
+  if (message.content === ".sug") {
   if (!message.channel.guild) return;
   let args = message.content.split(" ").slice(1).join(' ');
   client.users.get("314845344313901057").send(
@@ -1661,28 +1651,26 @@ const codes = {
   };
   });
 
-client.on('message', ra3d => {   
- if (ra3d.content.startsWith(".delete-cannels")) {
-    if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply('**⚠  لايوجد لديك صلاحية**');
-     ra3d.guild.channels.forEach(c => { c.delete() })
-                let embed = new Discord.RichEmbed()
-            .setColor('#fd0101')
-            .setDescription('** تم حذف كل رومات السيرفر ✅ **')
-           ra3d.author.sendEmbed(embed);
- }
- });
-
-
-client.on('message', ra3d => {   
- if (ra3d.content.startsWith(".delet-roles")) {
-    if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply('**⚠  لايوجد لديك صلاحية**');
-     ra3d.guild.roles.forEach(r => { r.delete() }) 
-                let embed = new Discord.RichEmbed()
-            .setColor('#fd0101')
-            .setDescription('تم حذف كل الرتب بالسيرفر ✅')
-           ra3d.author.sendEmbed(embed);
- }
- });
+client.on('message', omar => {
+var prefix = ".";
+if(omar.content.split(' ')[0] == prefix + 'delet-channels') {  
+if (!omar.channel.guild) return;
+if(!omar.guild.member(omar.author).hasPermission("MANAGE_CHANNELS")) return omar.reply("**You Don't Have ` MANAGE_CHANNELS ` Permission**");
+if(!omar.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return omar.reply("**I Don't Have ` MANAGE_CHANNELS ` Permission**");
+omar.guild.channels.forEach(m => {
+m.delete();
+});
+}
+if(omar.content.split(' ')[0] == prefix + 'delet-roles') { 
+if (!omar.channel.guild) return;
+if(!omar.guild.member(omar.author).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return omar.reply("**You Don't Have ` MANAGE_ROLES_OR_PERMISSIONS ` Permission**");
+if(!omar.guild.member(client.user).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return omar.reply("**I Don't Have ` MANAGE_ROLES_OR_PERMISSIONS ` Permission**");
+omar.guild.roles.forEach(m => {
+m.delete();
+});
+omar.reply("`تم حذف جميع الرتب بنجاح ✅`")
+}
+});
 
 client.on("message", async message => {
            let args = message.content.split(' ').slice(1)
