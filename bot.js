@@ -85,15 +85,12 @@ Bot Owner : @The Prince#2981 | <@314845344313901057>
     if(msg.content === '.help') {
     let embed = new Discord.RichEmbed()
             .setColor("RANDOM")
-            .setThumbnail(msg.author.avatarURL)
             .setDescription(`اتفضل قائمة الأوامر ${msg.author.tag}
             .help-admin = كل الأوامر الإدارية مع التفاصيل
             .help-admin = كل الأوامر الإدارية مع التفاصيل
             .help-music = كل الأوامر الخاصة بالميوزك مع التفاصيل
             .suppot = للحصول على سيرفر الدعم
             
-`)
-
 
             message.channel.sendEmbed(embed);
     }
