@@ -1539,6 +1539,13 @@ client.on('message', function(message) {
         if(!messageReason) return message.reply("**منشن الشخص الذي تريد التبليغ عنه و اكتب السبب**");
     let mUser = message.mentions.users.first();
     if(!mUser) return message.channel.send("Couldn't find user.");
+message.channel.send("__**هل أنت متأكد من أنك تريد إرسال هذا إلى صاحب السيرفر ؟؟**__").then(msg => {
+    msg.react("✅")
+    msg.react("❌")
+.then(() => msg.react('❌'))
+.then(() =>msg.react('✅'))
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
     let Rembed = new Discord.RichEmbed()
     .setTitle("`New Report!`")
     .setThumbnail(message.author.avatarURL)
@@ -1548,18 +1555,10 @@ client.on('message', function(message) {
     .addField("**# - Channel:**",message.channel,true)
     .setFooter("لو ان الابلاغ فيه مزح راح يتعرض صاحب الابلاغ لقوبات")
 message.channel.send(Rembed)
-message.channel.send("__**هل أنت متأكد من أنك تريد إرسال هذا إلى صاحب السيرفر ؟؟**__").then(msg => {
-    msg.react("✅")
-    msg.react("❌")
-.then(() => msg.react('❌'))
-.then(() =>msg.react('✅'))
-let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
 
-let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
-let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
+let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 10000 });
 reaction1.on("collect", r => {
-    message.guild.owner.send(Rembed)
+    `${message.guild.owner.send(Rembed)}`
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
