@@ -785,20 +785,6 @@ const Sra7a = [
 });
 
 
-client.on('message' , message => { 
-		    var prefix = ".";
-     if (message.content === prefix + "all-sv") {
-
-if(!message.channel.guild) return;
-  if(message.content < 1023) return
-  const Embed11 = new Discord.RichEmbed()
-.setAuthor(client.user.username,client.user.avatarURL)
-.setThumbnail(client.user.avatarURL)
-.setDescription(`__**مجموع السيرفرات ${client.guilds.size} \n \n${client.guilds.map(guilds => `- ${guilds.name}`).join('\n')}**__`)
-         message.channel.sendEmbed(Embed11)
-    }
-});
-
 
 client.on('message', message => {
 			    var prefix = ".";
@@ -2085,7 +2071,7 @@ var fkk =[
 });
   
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('welcome', 'Welcome');
+    let channel = member.guild.channels.find('name', 'Welcome');
     let memberavatar = member.user.avatarURL
       if (!channel) return; 
     let embed = new Discord.RichEmbed()
