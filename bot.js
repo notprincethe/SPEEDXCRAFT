@@ -2000,7 +2000,6 @@ client.on('message', msg => {
   }
 });
 
-const stripIndents = require('common-tags').stripIndents;
 
 client.on('message', msg => {
  if (msg.content.startsWith(prefix + 'cal')) {
