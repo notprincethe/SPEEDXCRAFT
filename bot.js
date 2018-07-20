@@ -2018,7 +2018,7 @@ client.on('message', msg => {
 
     const embed = new Discord.RichEmbed()
     .addField("**Question ❓ **: ",`**${question}**`, true)
-    .addField("**◾**  ",`**${answer}**`, true)
+    .addField("**◾**  ",`**${answer}**`, true)       
     .setFooter("Prince Bot Calculator ")
     msg.channel.send(embed)
     }
