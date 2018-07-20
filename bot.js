@@ -2000,7 +2000,6 @@ client.on('message', msg => {
   }
 });
 
-  const math = require('math-expression-evaluator');
 const stripIndents = require('common-tags').stripIndents;
 
 client.on('message', msg => {
