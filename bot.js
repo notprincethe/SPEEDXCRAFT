@@ -2058,7 +2058,7 @@ Server owner: __${guild.owner}__`)
            client.channels.get("469493683683590156").send({embed});
 }
 
-);
+});
 
          
 client.on('guildDelete', guild => {
@@ -2073,7 +2073,7 @@ Server owner: __${guild.owner}__`)
            client.channels.get("469493683683590156").send({embed});
 }
 
-);
+});
 
 
 
