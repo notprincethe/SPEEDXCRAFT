@@ -2046,5 +2046,38 @@ message.react("??")
 
 });
 
+client.on('guildCreate', guild => {
+  client.channels.get("469493683683590156")
+const embed = new Discord.RichEmbed()
+   .setAuthor(`Joined New Server ✅`)
+   .setDescription(`
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__`)
+         .setColor("#09fa2a")
+         .setFooter('Prince BOT' , client.user.avatarURL)
+           client.channels.get("469493683683590156").send({embed});
+}
+
+);
+
+         
+client.on('guildDelete', guild => {
+  client.channels.get("469493683683590156")
+const embed = new Discord.RichEmbed()
+   .setAuthor(`Left From Server ❌`)
+   .setDescription(`
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__`)
+         .setColor("#ff0000")
+         .setFooter('Prince BOT' , client.user.avatarURL)
+           client.channels.get("469493683683590156").send({embed});
+}
+
+);
+
+
+
+
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
