@@ -446,9 +446,10 @@ function play(guild, song) {
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`🌹  ولكم نورت السيرفر 🌹 
-👑اسم العضو  ${member}👑  
-انت العضو رقم ${member.guild.memberCount}`) 
+  return channel.send(`**🌹  ولكم نورت السيرفر 🌹 
+👑اسم العضو  ${member}👑
+لا تنسا شيك على القوانين عشان تتجنب المشاكل  
+انت العضو رقم ${member.guild.memberCount}**`) 
 }).catch(console.error)
 });
 
@@ -592,6 +593,19 @@ if (message.content === '.invite') {
 
 client.on('message', message => {
      if (message.content === ".invite") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#9B59B6")
+  .addField(" **INVITE LINK : https://goo.gl/VddrDM **"," Prince Bot ")
+     
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
+
+client.on('message', message => {
+     if (message.content === ".inv") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
