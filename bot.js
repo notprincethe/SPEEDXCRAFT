@@ -655,27 +655,24 @@ if( verifed.some(word => message.author.id.includes(word)) ) {    return message
 });
 
 client.on('message', message => {
-		    var prefix = ".";
-    if (message.author.bot) return;
-            if(message.content.startsWith(prefix + 'avatar')) {
+  if (message.content.startsWith(".avatar")) {
 
-         var men = message.mentions.users.first();
-      var heg;
-      if(men) {
-          heg = men
-      } else {
-          heg = message.author
-      }
-        message.channel.send({files: [
+      var mentionned = message.mentions.users.first();
+  var client;
+    if(mentionned){
+        var client = mentionned;
+    } else {
+        var client = message.author;
+        
+    }
+      const embed = new Discord.RichEmbed()
+      .setColor("RANDOM")
+        .setAuthor(message.author.username, message.author.avatarURL)
+      .setImage(`${client.avatarURL}`)
+    message.channel.sendEmbed(embed);
 
-        {
-                       attachment: heg.displayAvatarURL,
-           name : "logo.gif"
-        }
-    ]})
-}
+  }
 });
-
 
 
 const Sra7a = [
