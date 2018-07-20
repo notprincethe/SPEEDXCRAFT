@@ -563,7 +563,7 @@ client.on('message',  (message) => {
 
   client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [`.help | Prince Bot `,` .invite | Prince Bot`,`.support | Prince Bot`,`.help | Prince Bot | ❤✨`,` Servers ${client.guilds.size} ` ,` Users ${client.users.size}`];
+    var setGame = [`.help | Prince Bot ❤✨ `,` .invite | Prince Bot ❤✨`,`.support | Prince Bot ❤✨`,`.help | Prince Bot ❤✨`,` Servers ${client.guilds.size} ❤✨` ,` Users ${client.users.size} ❤✨` ,`Servers ${client.guilds.size} | Users + ${client.users.size} `];
     var i = -1;
     var j = 0;
     setInterval(function (){
