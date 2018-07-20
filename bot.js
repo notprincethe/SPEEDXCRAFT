@@ -60,8 +60,8 @@ client.on("message", message => {
   .kiss or اعطاء بوسة للشخص الي تمنشنو : .بوسة [New]
   .cal : الألة الحاسبة
   .فكك : [new] لعبة فكك الكلمة او الجملة
-
-  **إنشاء الله سيتم إضافت أوامر أخرى**...
+ 
+  **إنشاء الله سيتم إضافت أوامر أخرى**...      
   
   رابط إضافة البوت :  https://goo.gl/VddrDM  
 Our Discord Serveur For Support : https://discord.gg/DNJ8Q2B
