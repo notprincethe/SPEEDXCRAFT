@@ -47,8 +47,8 @@ m.sendMessage(args)
 client.on('message', msg => {
   if (msg.content === 'برب') {
     msg.reply('تيت يا قلبي بس لا تطول');
-  }
-});
+  }   
+}); 
 
  client.on('message', msg => {
   if (msg.content === 'هاي') {
